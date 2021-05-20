@@ -1,7 +1,14 @@
 {
-  "name": "cli-script",
+  "name": "@wvcode/utils",
+  "description": "Módulo contendo funções utilitárias para scripts.",
   "version": "1.0.0",
-  "repository": "https://gitlab.com/wvcode/javascript/cli-script.git",
+  "main": "utils.js",
+  "repository": "https://gitlab.com/wvcode/modules/utils.git",
+  "homepage": "https://gitlab.com/wvcode/modules/utils.git#readme",
   "author": "Walter Ritzel <wpcortes@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "neat-csv": "^6.0.1",
+    "objects-to-csv": "^1.3.6"
+  }
 }

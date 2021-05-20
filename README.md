@@ -1,39 +1,54 @@
-# cli-script
+# utils
 
-O cli-script é um template para projetos de script linhas de comando em nodejs.
+O utils é um módulo de funções utilitárias para scripts escrito em javascript.
 
-Scripts de linha de comando são aqueles scripts que você utiliza no prompt de comando, chamando o executável do node, como no exemplo abaixo:
+## Para que ele serve?
 
-```cmd
-/path/to/folder/node script.js
+Sabe aquelas funções que são uma mão na roda, mas nunca temos prontas? Pois é, pensando nessa situação, criamos esse módulo, que irá crescendo conforme criamos mais funções dessas.
+
+## Como instalar?
+
+```bash
+npm install @wvcode/utils
 ```
 
-Este template tem o objetivo de ajuda-lo a configurar o seu editor de código preferido (o nosso é o VSCode), para ajuda-lo a escrever um código que seja, além de funcional, bonito.
+or
 
-Outra característica é que este template também tem o arquivo package.json. Se você já aprendeu um pouco sobre nodejs, sabe que esse arquivo é normalmente gerado pelo comando **npm init**, para indicar para o node que existe um projeto ali. Então, ao baixar esse repositório, você já tem um projeto node prontinho para usar!
+```bash
+yarn add @wvcode/utils
+```
 
-Ele contém os seguintes arquivos:
+## Como utilizar?
 
-- .editorconfig - setar configurações independente do editor sendo utilizado
-- .eslintrc - configurações padrão para o javascript lintero
-- .gitignore - lista de folders a serem excluídos do processo de commit/pull/push
-- .prettierrc - regras de formatação do código
-- package.json - dependências e configurações.
+Segue um exemplo básico de utilização:
 
-## Como utilizar
+```javascript
+const SurveyAPI = require('@wvcode/sm-wrapper')
+const { files, sleep, convertToArrayOfArrays } = require('@wvcode/utils')
+const fs = require('fs')
 
-Para usar esse repositório, você pode fazer o seguinte:
+// le arquivo no formato CSV e carrega em um objeto JSON
+var jsonData = await files.readCSVtoJSON('file1.csv')
 
-- Fazer o download, clicando no link de download na interface do Gitlab
-- Se você tem uma conta no gitlab:
-  - pode utilizar a funcionalidade de Fork, para duplicar o repositório
-  - pode clonar o repositório no seu computador e depois mudar o apontamento do repositório remoto para o seu próprio repositório
+// converte objeto JSON e array de arrays
+var arrayOfArrays = convertToArrayOfArrays(jsonData, true)
 
-Caso você não tenha uma conta no gitlab, a opção de clonar o repositório também irá funcionar, sem problemas!
+// salva arquivos
+fs.writeFileSync('file1.json', JSON.stringify(jsonData))
+fs.writeFileSync('file2.json', JSON.stringify(arrayOfArrays))
 
-## Finalizando
+// salva objeto JSON em arquivo no formato CSV
+await files.writeJSONtoCSV(jsonData, 'file2.csv')
 
-Esperamos que esse repositório te ajude em seus projetos!!!
+// pausa execução do script em milisegundos
+sleep(2000)
+```
+
+## Mais Informações?
+
+Era só isso mesmo. Por enquanto, este módulo está pequeno, e os exemplos acima cobrem todas as funcionalidades disponíveis.
+
+Mas temos a documentação [aqui](documentation.md).
 
 **Bom código!!!**
 
