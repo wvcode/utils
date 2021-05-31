@@ -1,10 +1,10 @@
 {
   "name": "@wvcode/utils",
-  "description": "Módulo contendo funções utilitárias para scripts.",
-  "version": "1.0.0",
+  "description": "Sabe aquelas funções que são uma mão na roda, mas nunca temos prontas? Pois é, pensando nessa situação, criamos esse módulo, que irá crescendo conforme criamos mais funções dessas.",
+  "version": "1.0.5",
   "main": "utils.js",
-  "repository": "https://gitlab.com/wvcode/modules/utils.git",
-  "homepage": "https://gitlab.com/wvcode/modules/utils.git#readme",
+  "repository": "https://github.com/wvcode/utils.git",
+  "homepage": "https://github.com/wvcode/utils.git#readme",
   "author": "Walter Ritzel <wpcortes@gmail.com>",
   "license": "MIT",
   "dependencies": {
