@@ -1,7 +1,7 @@
 {
   "name": "@wvcode/utils",
   "description": "Sabe aquelas funções que são uma mão na roda, mas nunca temos prontas? Pois é, pensando nessa situação, criamos esse módulo, que irá crescendo conforme criamos mais funções dessas.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "utils.js",
   "repository": "https://github.com/wvcode/utils.git",
   "homepage": "https://github.com/wvcode/utils.git#readme",
@@ -9,6 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "neat-csv": "^6.0.1",
-    "objects-to-csv": "^1.3.6"
+    "objects-to-csv": "^1.3.6",
+    "xlsx": "^0.17.0"
   }
 }
